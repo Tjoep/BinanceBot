@@ -2,11 +2,11 @@
 
 A bot to automatically buy and sell cryptocurrency on Binance. 
 
-# Strategy
+## Strategy
 
 Currently this project consists of two different bots, named **EthTrader** and **BtcTrader** which each apply a different strategy. 
 
-## EthTrader
+### EthTrader
 
 The **EthTrader** applies a very simple strategy. It will check the current price of ETH, and create **BUY** orders for a customizable percentage difference below this current price. When this **BUY** order is filled, the bot will create a **SELL** order for a better price based on the same percentage difference.
 
@@ -16,7 +16,7 @@ Example: Say the current price of ETH is $1000 USD, and the customizable percent
 3. The bot creates a SELL order for the price: $900 * 1.1 = $990.
 4. When the price of ETH rises back above $990, the sell order will be filled. Back to step 1.  
 
-## BtcTrader
+### BtcTrader
 
 
 What the **BtcTrader** does is the following:
@@ -34,17 +34,20 @@ The **BtcTrader** will **sell** BTC when **all** of the following criteria are m
 - Fear & Greed index > 75
 - The Puell Year Multiple > 4
 - The current price of BTC > the 2 year moving average * 5.
-### Staking
+#### Staking
 The **BtcTrader** will automatically put your available **BUSD** or **BTC** in a flexible savings account on Binance.
 - If the **BUY** criteria are met: Redeems all **BUSD** from the flexible savings account and uses it to buy **BTC**, the **BTC** will be then but in a savings account until the **SELL** criteria are met.
 - If the **SELL** criteria are met: Redeems all **BTC** and sells it for **BUSD**, the **BUSD** will be put in a flexible savings account until the **BUY** criteria are met. 
 
+## Disclaimer
+The applied strategies are in **NO WAY** proven, and not thoroughly tested. This project is made to provide sample code for people wanting to implement their own trading bots on Binance in C#.
 
-
-# Requirements
+## Requirements
 In order to install this bot you will need the following:
 - [Microsoft Azure Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview). 
 - [Binance Account](https://accounts.binance.com/en/register?ref=103505228) with API credentials which Reading & Spot and Margin trading rights. 
 - To properly calculate the Puell Multiple, the BTC revenue data from the last year is needed. The revenue data from Dec 28, 2020 to Feb 01, 2022 is provided in the text file (~/Data/dayrevenue.txt). You can either add the revenue data for dates after Feb 01, 2022 yourself or pay for API access to a revenue data provider, for example: https://cryptoquant.com/docs#operation/getPuellIndex
+
+
 
 
