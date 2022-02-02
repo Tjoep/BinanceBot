@@ -40,6 +40,8 @@ The **BtcTrader** will automatically put your available **BUSD** or **BTC** in a
 - If the **BUY** criteria are met: Redeems all **BUSD** from the flexible savings account and uses it to buy **BTC**, the **BTC** will be then but in a savings account until the **SELL** criteria are met.
 - If the **SELL** criteria are met: Redeems all **BTC** and sells it for **BUSD**, the **BUSD** will be put in a flexible savings account until the **BUY** criteria are met. 
 
+The criteria above are copied from the Reddit post above, credits to: [u/Jxntb733](https://www.reddit.com/user/Jxntb733).
+
 # Requirements
 In order to install this bot you will need the following:
 - [Microsoft Azure Storage Account](https://docs.microsoft.com/en-us/azure/storage/common/storage-account-overview). 
