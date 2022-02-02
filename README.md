@@ -18,7 +18,6 @@ Example: Say the current price of ETH is $1000 USD, and the customizable percent
 
 ## BtcTrader
 
-The strategy of the **BtcTrader** is a bit more advanced than the **EthTrader**. The strategy is based on the reddit post: "https://www.reddit.com/r/CryptoCurrency/comments/s7ykio/when_to_buy_and_when_to_sell_bitcoin_an/". 
 
 What the **BtcTrader** does is the following:
 - Fetch the **BTC** price data for each day for the past 2 years. This data is used to calculated the 2 year moving average. The source of the data is: https://data.binance.vision/, the bot stores the price table in Azure Table Storage so it only has to fetch the historical price data once.
@@ -40,7 +39,7 @@ The **BtcTrader** will automatically put your available **BUSD** or **BTC** in a
 - If the **BUY** criteria are met: Redeems all **BUSD** from the flexible savings account and uses it to buy **BTC**, the **BTC** will be then but in a savings account until the **SELL** criteria are met.
 - If the **SELL** criteria are met: Redeems all **BTC** and sells it for **BUSD**, the **BUSD** will be put in a flexible savings account until the **BUY** criteria are met. 
 
-The criteria above are copied from the Reddit post above, credits to: [u/Jxntb733](https://www.reddit.com/user/Jxntb733).
+
 
 # Requirements
 In order to install this bot you will need the following:
